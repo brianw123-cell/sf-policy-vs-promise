@@ -25,6 +25,7 @@
         <h1 class="text-lg font-bold tracking-tight text-white">WatchTheFlock</h1>
         <span class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">Track 4: Privacy · Agency &amp; Policy Level</span>
         <a href="/intro.html" class="text-xs px-2.5 py-0.5 rounded bg-sky-900/60 hover:bg-sky-800 text-sky-300 border border-sky-700 transition">▶ Watch 35s Intro Film</a>
+        <a href="/heatmap.html" class="text-xs px-2.5 py-0.5 rounded bg-amber-900/50 hover:bg-amber-800 text-amber-200 border border-amber-700 transition">Policy vs Practice heatmap →</a>
       </div>
       <p class="text-xs text-slate-400 mt-0.5">Comparing San Francisco surveillance policies against data-sharing reality (EFF Atlas + SF Surveillance Inventory)</p>
     </div>
@@ -40,6 +41,10 @@
       <div class="px-3 py-1.5 rounded-lg bg-red-950/40 border border-red-900/60">
         <span class="text-red-300">SF Policies w/ Sharing Gaps:</span>
         <strong id="m-gaps" class="text-red-400 ml-1 font-mono">--</strong>
+      </div>
+      <div class="px-3 py-1.5 rounded-lg bg-red-950/40 border border-red-900/60">
+        <span class="text-red-300">SF Policies w/ No Access Audit:</span>
+        <strong id="m-audit" class="text-red-400 ml-1 font-mono">--</strong>
       </div>
     </div>
   </header>
@@ -187,6 +192,7 @@
       document.getElementById('m-total').textContent = `${appData.metrics.bay_area_total_records} (9 Bay Counties)`;
       document.getElementById('m-recent').textContent = `${appData.metrics.bay_area_recent_source_pct}% (${appData.metrics.bay_area_recent_source_count})`;
       document.getElementById('m-gaps').textContent = `${appData.metrics.sf_policies_with_sharing_gaps} / ${appData.metrics.sf_policies_count}`;
+      document.getElementById('m-audit').textContent = `${appData.metrics.sf_policies_with_audit_gaps} / ${appData.metrics.sf_policies_count}`;
 
       initMap();
       renderRoute();

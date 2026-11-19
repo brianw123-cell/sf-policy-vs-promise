@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": "rm -rf site && mkdir -p site && cp -R manvi/public/. site/ && cp heatmap.html site/heatmap.html",
+  "outputDirectory": "site"
+}
